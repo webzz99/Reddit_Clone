@@ -3,4 +3,3 @@ pytest
 pymongo
 pyjwt
 bcrypt
-
