@@ -3,3 +3,4 @@ pytest
 pymongo
 pyjwt
 bcrypt
+gunicorn==20.1.0
