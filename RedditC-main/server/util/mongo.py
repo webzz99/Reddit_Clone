@@ -1,9 +1,10 @@
 from bson import ObjectId
 from pymongo import MongoClient
+import os  # Import the os module to access environment variables
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/redditcdb')
-
-MONGO_CLIENT = MongoClient(host="localhost", port=27017)
+# Use an environment variable for the MongoDB URI, or default to a local MongoDB instance
+MONGO_URI = os.getenv('MONGODB_URI', 'mongodb://127.0.0.1:27017/redditc_db')
+MONGO_CLIENT = MongoClient(MONGO_URI)
 REDDITC_DB = MONGO_CLIENT["redditc_db"]
 
 USER_COLLECTION = REDDITC_DB.user
@@ -12,12 +13,9 @@ COMMENT_COLLECTION = REDDITC_DB.comment
 TEST_COLLECTION = REDDITC_DB.test
 VOTE_COLLECTION = REDDITC_DB.vote
 
-
 def stringify_ids(items: list):
     return [stringify_id(item) for item in items]
 
-
 def stringify_id(item):
     return {**item, "_id": str(item["_id"])}
-
 
