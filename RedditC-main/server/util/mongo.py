@@ -3,7 +3,7 @@ from pymongo import MongoClient
 import os  # Import the os module to access environment variables
 
 # Use an environment variable for the MongoDB URI, or default to a local MongoDB instance
-MONGO_URI = os.getenv('MONGODB_URI', 'mongodb://127.0.0.1:27017/REDC')
+MONGO_URI = os.getenv('MONGODB_URI', 'mongodb://127.0.0.1:27017/redc')
 MONGO_CLIENT = MongoClient(MONGO_URI)
 REDDITC_DB = MONGO_CLIENT["redditc_db"]
 
