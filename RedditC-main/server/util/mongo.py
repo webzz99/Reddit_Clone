@@ -7,6 +7,8 @@ MONGO_URI = os.getenv('MONGODB_URI', 'mongodb://127.0.0.1:27017/redc')
 MONGO_CLIENT = MongoClient(MONGO_URI)
 REDDITC_DB = MONGO_CLIENT["redditc_db"]
 
+client = MongoClient('mongodb+srv://volkan1990:volkan1990@redc.7bbrtch.mongodb.net/?retryWrites=true&w=majority&appName=REDC')
+
 USER_COLLECTION = REDDITC_DB.user
 POST_COLLECTION = REDDITC_DB.post
 COMMENT_COLLECTION = REDDITC_DB.comment
