@@ -1,7 +1,7 @@
 from bson import ObjectId
 from pymongo import MongoClient
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/redditcdb');
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/redditcdb')
 
 MONGO_CLIENT = MongoClient(host="localhost", port=27017)
 REDDITC_DB = MONGO_CLIENT["redditc_db"]
