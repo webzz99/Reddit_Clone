@@ -1,8 +1,1 @@
-flask
-pytest
-pymongo
-pyjwt
-bcrypt
-gunicorn==20.1.0
-sqlparse==0.4.4
-asgiref==3.7.2
+
